@@ -1,0 +1,27 @@
+# Render Blueprint — نشر عرض «بروتوكول الكرامة» كموقع ثابت (Static Site)
+services:
+  - type: web
+    name: karama-protocol
+    runtime: static
+    # الموقع لا يحتاج خطوة بناء؛ الملفات جاهزة كما هي
+    buildCommand: echo "Static site - no build step"
+    staticPublishPath: .
+    headers:
+      # تخزين ملفات الخط مؤقتاً لفترة طويلة لتسريع التحميل
+      - path: /fonts/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /css/*
+        name: Cache-Control
+        value: public, max-age=3600
+      - path: /js/*
+        name: Cache-Control
+        value: public, max-age=3600
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+    routes:
+      # أي رابط غير موجود يعود إلى الصفحة الرئيسية
+      - type: rewrite
+        source: /*
+        destination: /index.html
