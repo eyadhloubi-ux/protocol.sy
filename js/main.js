@@ -14,7 +14,7 @@
   var hint = document.getElementById('hint');
   var hintText = document.getElementById('hintText');
 
-  var STEP_SLIDE = 1;
+  var STEP_SLIDE = slides.indexOf(document.getElementById('steps').closest('.slide'));
   var LAST = slides.length - 1;
   var N = steps.length;
   var idx = 0;        // current slide

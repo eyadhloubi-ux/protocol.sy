@@ -1,4 +1,4 @@
-# Render Blueprint — نشر عرض «بروتوكول الكرامة» كموقع ثابت (Static Site)
+# Render Blueprint — نشر عرض «المشاركة المجتمعية» (Community Engagement) كموقع ثابت (Static Site)
 services:
   - type: web
     name: karama-protocol

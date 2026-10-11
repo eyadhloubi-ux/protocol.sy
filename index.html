@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>بروتوكول الكرامة</title>
-<meta name="description" content="عرض تفاعلي لفكرة شارات بروتوكول الكرامة: الشارات، مراحل الإعداد، دورة التقييم، والتوسع للقطاعات.">
+<title>المشاركة المجتمعية</title>
+<meta name="description" content="Community Engagement — عرض تفاعلي لمشروع المشاركة المجتمعية: الشارات، مراحل الإعداد، دورة التقييم، والتوسع للقطاعات.">
 <meta name="theme-color" content="#032724">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23032724'/%3E%3Cg fill='none' stroke='%23B9A779' stroke-width='1.6'%3E%3Crect x='6' y='6' width='12' height='12'/%3E%3Crect x='6' y='6' width='12' height='12' transform='rotate(45 12 12)'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/fonts.css">
@@ -30,10 +30,11 @@
   <header class="top">
     <div class="brand">
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="14"/><rect x="5" y="5" width="14" height="14" transform="rotate(45 12 12)"/></svg>
-      <span>بروتوكول الكرامة</span>
+      <span>المشاركة المجتمعية</span>
+      <small dir="ltr">Community Engagement</small>
     </div>
     <div class="tools">
-      <span class="count"><b id="cur">1</b> / 4</span>
+      <span class="count"><b id="cur">1</b> / 5</span>
       <button type="button" class="fs" id="fs" aria-label="ملء الشاشة" title="ملء الشاشة">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
       </button>
@@ -41,10 +42,11 @@
   </header>
 
   <nav class="dots" aria-label="الشرائح">
-    <button type="button" data-go="0" class="on" aria-label="الشارات"><span>الشارات</span></button>
-    <button type="button" data-go="1" aria-label="المراحل"><span>المراحل</span></button>
-    <button type="button" data-go="2" aria-label="الاستمرارية"><span>الاستمرارية</span></button>
-    <button type="button" data-go="3" aria-label="القطاعات"><span>القطاعات</span></button>
+    <button type="button" data-go="0" class="on" aria-label="الغلاف"><span>الغلاف</span></button>
+    <button type="button" data-go="1" aria-label="الشارات"><span>الشارات</span></button>
+    <button type="button" data-go="2" aria-label="المراحل"><span>المراحل</span></button>
+    <button type="button" data-go="3" aria-label="الاستمرارية"><span>الاستمرارية</span></button>
+    <button type="button" data-go="4" aria-label="التوسع"><span>التوسع</span></button>
   </nav>
 
   <div class="hint" id="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span id="hintText">مرّر للمتابعة</span></div>
@@ -52,13 +54,55 @@
   <main class="vp" id="vp">
     <div class="deck" id="deck">
 
+      <!-- ============ 0. الغلاف ============ -->
+      <section class="slide active" aria-label="الغلاف">
+        <div class="fit cover">
+          <div class="cv-text">
+            <p class="cv-tag rise"><i aria-hidden="true"></i>نسخة مقترحة | المخافر</p>
+            <p class="eyebrow rise" style="--d:60"><span dir="ltr">Community Engagement</span></p>
+            <h1 class="cv-title rise" style="--d:120">المشاركة المجتمعية</h1>
+            <p class="cv-lead rise" style="--d:220">مقترح لبروتوكولات يصوغها المجتمع و<strong>وزارة الداخلية</strong> معاً، وشارات تُمنح لمن يلتزم بها.</p>
+          </div>
+
+          <div class="cv-visual rise" style="--d:320">
+            <svg class="cv-flow" viewBox="0 0 640 180" aria-hidden="true">
+              <line class="cv-link" x1="435" y1="90" x2="365" y2="90"/>
+              <line class="cv-link" x1="278" y1="90" x2="166" y2="90"/>
+              <circle class="cv-dot d1" cx="435" cy="90" r="5"/>
+              <circle class="cv-dot d2" cx="278" cy="90" r="5"/>
+
+              <g class="cv-a"><circle cx="483" cy="90" r="40"/><text x="483" y="90">المجتمع</text></g>
+              <g class="cv-b"><circle cx="583" cy="90" r="40"/><text x="583" y="90">الوزارة</text></g>
+
+              <rect class="cv-doc" x="290" y="46" width="60" height="88" rx="5"/>
+              <path class="cv-ln l1" pathLength="1" d="M302 68h36"/>
+              <path class="cv-ln l2" pathLength="1" d="M302 82h36"/>
+              <path class="cv-ln l3" pathLength="1" d="M302 96h36"/>
+              <path class="cv-ln l4" pathLength="1" d="M302 110h22"/>
+
+              <circle class="cv-ring" cx="107" cy="90" r="46"/>
+              <g class="cv-badge">
+                <rect x="77" y="60" width="60" height="60"/>
+                <rect x="77" y="60" width="60" height="60" transform="rotate(45 107 90)"/>
+                <circle cx="107" cy="90" r="13"/>
+              </g>
+            </svg>
+            <ol class="cv-steps">
+              <li>المجتمع + وزارة الداخلية</li>
+              <li>البروتوكول</li>
+              <li>الشارة</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
       <!-- ============ 1. الشارات ============ -->
-      <section class="slide active" aria-label="الشارات">
+      <section class="slide" aria-label="الشارات">
         <div class="fit s1">
           <div>
-            <p class="eyebrow rise">بروتوكول الكرامة</p>
-            <h1 class="rise" style="--d:80">شارة الكرامة</h1>
-            <p class="lead rise" style="--d:160">شارة يحملها المخفر الملتزم <strong>ببروتوكول متفق عليه</strong> بين الشرطة والمجتمع، ومعها شارات إضافية لمجالات التميّز.</p>
+            <p class="eyebrow rise">الشارات</p>
+            <h1 class="rise" style="--d:80">لكل بروتوكول شارة</h1>
+            <p class="lead rise" style="--d:160">تُمنح الشارة للمخفر الملتزم بالبروتوكول، وأولها <strong>شارة التواصل</strong>.</p>
             <p class="tap rise" style="--d:260">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V5a2 2 0 0 1 4 0v6M13 10a2 2 0 0 1 4 0v3M9 11a2 2 0 0 0-4 0v2c0 4 3 7 7 7h1a5 5 0 0 0 5-5v-2"/></svg>
               اضغط على أي شارة لتعرف معناها
@@ -67,7 +111,7 @@
 
           <div class="visual1">
             <button type="button" class="badge badge-main on rise" style="--d:120" aria-pressed="true"
-              data-title="شارة الكرامة"
+              data-title="شارة التواصل"
               data-text="الالتزام ببنود البروتوكول في التعامل مع المواطن، وتيسير الإجراءات، ومسار واضح للشكاوى.">
               <svg viewBox="-130 -130 260 260" aria-hidden="true">
                 <circle class="orbit" r="124"/>
@@ -83,7 +127,7 @@
                 </g>
                 <circle class="core" r="56"/>
                 <text class="t-s" y="-18">شارة</text>
-                <text class="t-b" y="14">الكرامة</text>
+                <text class="t-b" y="14">التواصل</text>
               </svg>
               <span class="cap">الشارة الأساسية</span>
             </button>
@@ -119,7 +163,7 @@
             </div>
 
             <div class="desc rise" style="--d:900" id="desc" aria-live="polite">
-              <h3 id="descT">شارة الكرامة</h3>
+              <h3 id="descT">شارة التواصل</h3>
               <p id="descP">الالتزام ببنود البروتوكول في التعامل مع المواطن، وتيسير الإجراءات، ومسار واضح للشكاوى.</p>
             </div>
           </div>
@@ -132,12 +176,27 @@
           <header class="s2-head rise">
             <div>
               <p class="eyebrow">المراحل</p>
-              <h2>من الترشيح إلى الشارة</h2>
+              <h2>من التشخيص إلى الشارة</h2>
             </div>
-            <p class="counter"><b id="k">1</b> / 6</p>
+            <p class="counter"><b id="k">1</b> / 7</p>
           </header>
 
           <ol class="steps" id="steps">
+            <li class="step">
+              <div class="ic">
+                <svg viewBox="0 0 64 64" class="i-dx" aria-hidden="true">
+                  <path class="base" d="M8 52h40"/>
+                  <rect class="bar b1" x="11" y="38" width="8" height="14" rx="1.5"/>
+                  <rect class="bar b2" x="23" y="28" width="8" height="24" rx="1.5"/>
+                  <rect class="bar b3" x="35" y="34" width="8" height="18" rx="1.5"/>
+                  <g class="lens"><circle cx="45" cy="19" r="8"/><path d="M50.7 24.7l6 6"/></g>
+                </svg>
+              </div>
+              <span class="num">1</span>
+              <h3>تشخيص الاحتياجات</h3>
+              <p>دراسة أولية لما يحتاجه المجتمع وما تحتاجه الوزارة، تحدد المحور الرئيسي للورشة.</p>
+            </li>
+
             <li class="step">
               <div class="ic">
                 <svg viewBox="0 0 64 64" class="i-nom" aria-hidden="true">
@@ -149,7 +208,7 @@
                   <circle class="p o" cx="13" cy="25.8" r="4" style="--x:-12px;--y:-4px"/>
                 </svg>
               </div>
-              <span class="num">1</span>
+              <span class="num">2</span>
               <h3>الترشيح</h3>
               <p>اختيار المشاركين من المجتمع والوزارة، بحصة لكل فئة.</p>
               <ul class="chips"><li>شباب</li><li>سيدات</li><li>طلاب جامعة</li><li>مسنّون</li><li>عناصر من رتب مختلفة</li></ul>
@@ -166,9 +225,9 @@
                   <path class="ln l3" pathLength="1" d="M26 38h8"/>
                 </svg>
               </div>
-              <span class="num">2</span>
+              <span class="num">3</span>
               <h3>ورشة البروتوكول</h3>
-              <p>ورشة مشتركة على عدة أيام، تصوغ بروتوكولاً يحفظ كرامة المواطن والعنصر.</p>
+              <p>ورشة مشتركة على عدة أيام حول المحور الذي حدده التشخيص، تصوغ بروتوكولاً يحفظ كرامة المواطن والعنصر.</p>
             </li>
 
             <li class="step">
@@ -180,7 +239,7 @@
                   <path class="w w3" d="M50 16q12 16 0 32"/>
                 </svg>
               </div>
-              <span class="num">3</span>
+              <span class="num">4</span>
               <h3>الإعلان والتوعية</h3>
               <p>إطلاق البروتوكول، وتعريف المواطنين بحقوقهم وواجباتهم.</p>
             </li>
@@ -196,7 +255,7 @@
                   <path class="ck k3" pathLength="1" d="M13.8 46.6l2.4 2.4 4.6-5.2"/>
                 </svg>
               </div>
-              <span class="num">4</span>
+              <span class="num">5</span>
               <h3>التدريب والمعايير</h3>
               <p>تدريب العناصر على البروتوكول، وتحديد معايير قياس الالتزام.</p>
             </li>
@@ -211,7 +270,7 @@
                   <circle class="hub" cx="32" cy="44" r="3"/>
                 </svg>
               </div>
-              <span class="num">5</span>
+              <span class="num">6</span>
               <h3>قياس الالتزام</h3>
               <p>لجان متخصصة تقيس التزام كل مخفر بالمعايير.</p>
             </li>
@@ -227,7 +286,7 @@
                   </g>
                 </svg>
               </div>
-              <span class="num">6</span>
+              <span class="num">7</span>
               <h3>منح الشارة</h3>
               <p>الشارة لكل مخفر مستحق، وتكريم خاص لأفضل مخفر.</p>
             </li>
@@ -243,6 +302,7 @@
               <span class="rec">توثيق مستمر</span>
             </div>
             <ol class="media-track" id="mediaTrack">
+              <li>دعوة الناس للمشاركة في التشخيص</li>
               <li>إعلان فتح باب الترشيح</li>
               <li>كواليس الورشة وأصوات المشاركين</li>
               <li>حملة التوعية بالبروتوكول</li>
@@ -307,10 +367,10 @@
           <div class="s4-head">
             <div>
               <p class="eyebrow rise">التوسع</p>
-              <h2 class="rise" style="--d:80">آلية واحدة، بروتوكول لكل قطاع</h2>
-              <p class="lead rise" style="--d:160">كل قطاع يصوغ بروتوكوله مع المجتمع، ويحصل على شارته.</p>
+              <h2 class="rise" style="--d:80">عملية واحدة، تتكرر لكل قطاع ولكل بروتوكول</h2>
+              <p class="lead rise" style="--d:160">كلما أضفنا قطاعاً جديداً أو بروتوكولاً جديداً، نعيد المراحل نفسها من التشخيص إلى الشارة.</p>
             </div>
-            <p class="same rise" style="--d:240"><i aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></i>المراحل الست نفسها</p>
+            <p class="same rise" style="--d:240"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 8A5.5 5.5 0 1 1 11 3.4"/><path d="M11.5 1v3h-3"/></svg><i aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></i>المراحل السبع نفسها</p>
           </div>
 
           <ul class="sectors">
@@ -421,6 +481,38 @@
               </div>
             </li>
           </ul>
+
+          <div class="s4-bottom">
+            <div class="panel rise" style="--d:1000">
+              <h3 class="bh">أكثر من بروتوكول في القطاع الواحد</h3>
+              <ul class="pchips">
+                <li>التواصل</li><li>الشفافية</li><li>الشراكة مع الحي</li><li>الأسرة والطفل</li><li>الوصول</li>
+              </ul>
+              <p class="note">لكل بروتوكول ورشته ومعاييره وشارته.</p>
+            </div>
+            <div class="panel rise" style="--d:1100">
+              <h3 class="bh">لمن تُمنح الشارة؟</h3>
+              <div class="who">
+                <div class="opt o1">
+                  <svg viewBox="0 0 46 46" aria-hidden="true">
+                    <path class="o-st" d="M8 40V20h30v20M5 20l18-10 18 10M4 40h38"/>
+                    <rect class="o-st" x="19" y="31" width="8" height="9"/>
+                    <g class="o-mk"><rect x="20.5" y="21" width="5" height="5"/><rect x="20.5" y="21" width="5" height="5" transform="rotate(45 23 23.5)"/></g>
+                  </svg>
+                  <div><b>للمركز</b><small>المخفر أو القسم كفريق عمل</small></div>
+                </div>
+                <span class="or">أو</span>
+                <div class="opt o2">
+                  <svg viewBox="0 0 46 46" aria-hidden="true">
+                    <circle class="o-st" cx="23" cy="12" r="6"/>
+                    <path class="o-st" d="M10 42v-6c0-7 6-12 13-12s13 5 13 12v6"/>
+                    <g class="o-mk"><rect x="27" y="29" width="5" height="5"/><rect x="27" y="29" width="5" height="5" transform="rotate(45 29.5 31.5)"/></g>
+                  </svg>
+                  <div><b>للعنصر</b><small>تكريم فردي للعنصر الملتزم</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
