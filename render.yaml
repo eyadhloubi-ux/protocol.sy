@@ -1,7 +1,7 @@
-# Render Blueprint — نشر عرض «المشاركة المجتمعية» (Community Engagement) كموقع ثابت (Static Site)
+# Render Blueprint — نشر عرض «كفاءة» (Kafa'a) كموقع ثابت (Static Site)
 services:
   - type: web
-    name: karama-protocol
+    name: kafaa
     runtime: static
     # الموقع لا يحتاج خطوة بناء؛ الملفات جاهزة كما هي
     buildCommand: echo "Static site - no build step"

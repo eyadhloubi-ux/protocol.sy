@@ -1,4 +1,4 @@
-/* بروتوكول الكرامة — منطق العرض */
+/* كفاءة | Kafa'a — منطق العرض */
 (function () {
   'use strict';
 
@@ -6,54 +6,35 @@
   var vp = document.getElementById('vp');
   var deck = document.getElementById('deck');
   var slides = [].slice.call(document.querySelectorAll('.slide'));
-  var steps = [].slice.call(document.querySelectorAll('.step'));
-  var media = [].slice.call(document.querySelectorAll('#mediaTrack li'));
   var dots = [].slice.call(document.querySelectorAll('.dots button'));
-  var kEl = document.getElementById('k');
   var curEl = document.getElementById('cur');
   var hint = document.getElementById('hint');
   var hintText = document.getElementById('hintText');
 
-  var STEP_SLIDE = slides.indexOf(document.getElementById('steps').closest('.slide'));
   var LAST = slides.length - 1;
-  var N = steps.length;
-  var idx = 0;        // current slide
-  var shown = 1;      // how many stages are revealed on slide 2
-  var flow = false;   // phone / short-screen mode (normal scrolling page)
+  var idx = 0;
+  var flow = false;
   var lastMove = 0, acc = 0;
   var mq = window.matchMedia('(max-width: 760px), (max-height: 500px)');
 
-  /* ---------- badges (slide 1) ---------- */
-  var badges = [].slice.call(document.querySelectorAll('.badge'));
-  var desc = document.getElementById('desc');
-  var descT = document.getElementById('descT');
-  var descP = document.getElementById('descP');
-  badges.forEach(function (b) {
-    b.addEventListener('click', function () {
-      badges.forEach(function (o) {
-        var on = o === b;
-        o.classList.toggle('on', on);
-        o.setAttribute('aria-pressed', String(on));
-      });
-      descT.textContent = b.dataset.title;
-      descP.textContent = b.dataset.text;
-      desc.classList.remove('swap');
-      void desc.offsetWidth;
-      desc.classList.add('swap');
-    });
-  });
+  /* items revealed one per scroll, grouped by slide */
+  var groups = slides.map(function (s) { return [].slice.call(s.querySelectorAll('.step')); });
+  var shown = groups.map(function () { return 0; });
 
-  /* ---------- stages (slide 2) ---------- */
   function renderSteps() {
-    steps.forEach(function (s, i) {
-      s.classList.toggle('shown', i < shown);
-      s.classList.toggle('cur', idx === STEP_SLIDE && i === shown - 1);
+    if (flow) return;
+    groups.forEach(function (g, si) {
+      var n = shown[si];
+      g.forEach(function (el, i) {
+        el.classList.toggle('shown', i < n);
+        el.classList.toggle('cur', si === idx && i === n - 1);
+      });
+      var c = slides[si].querySelector('.counter b');
+      if (c) c.textContent = String(Math.max(n, 1));
     });
-    media.forEach(function (m, i) { m.classList.toggle('shown', i < shown); });
-    if (kEl) kEl.textContent = String(shown);
   }
 
-  /* ---------- scale each slide's content to fit the screen ---------- */
+  /* scale each slide's content to fit the screen */
   function fit() {
     if (flow) return;
     slides.forEach(function (s) {
@@ -75,50 +56,44 @@
     slides.forEach(function (s, i) { s.classList.toggle('active', i === idx); });
     dots.forEach(function (d, i) { d.classList.toggle('on', i === idx); });
     if (curEl) curEl.textContent = String(idx + 1);
-    hint.classList.toggle('off', idx === LAST);
-    hintText.textContent = (idx === STEP_SLIDE && shown < N) ? 'مرّر لإظهار المرحلة التالية' : 'مرّر للمتابعة';
+    hint.classList.toggle('off', idx === LAST && shown[idx] >= groups[idx].length);
+    hintText.textContent = shown[idx] < groups[idx].length ? 'مرّر لإظهار التالي' : 'مرّر للمتابعة';
     renderSteps();
   }
 
   function go(n) {
     n = Math.max(0, Math.min(LAST, n));
     if (n === idx) return;
-    if (n === STEP_SLIDE) shown = n > idx ? 1 : N;
+    shown[n] = n > idx ? Math.min(1, groups[n].length) : groups[n].length;
     idx = n;
     layout();
   }
   function next() {
-    if (idx === STEP_SLIDE && shown < N) { shown++; layout(); return; }
+    if (shown[idx] < groups[idx].length) { shown[idx]++; layout(); return; }
     go(idx + 1);
   }
   function prev() {
-    if (idx === STEP_SLIDE && shown > 1) { shown--; layout(); return; }
+    if (shown[idx] > 1) { shown[idx]--; layout(); return; }
     go(idx - 1);
   }
 
-  /* ---------- flow mode: reveal stages as they scroll into view ---------- */
+  /* flow mode: reveal items as they scroll into view */
   var io = null;
+  var allSteps = [].concat.apply([], groups);
   function startObserver() {
     if (io) return;
     if (!('IntersectionObserver' in window)) {
-      shown = N; renderSteps(); return;
+      allSteps.forEach(function (s) { s.classList.add('shown'); });
+      return;
     }
     io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (!e.isIntersecting) return;
-        var el = e.target;
-        if (el.classList.contains('step')) {
-          el.classList.add('shown');
-          var i = steps.indexOf(el);
-          if (media[i]) media[i].classList.add('shown');
-        } else if (el.id === 'media') {
-          media.forEach(function (m, i) { setTimeout(function () { m.classList.add('shown'); }, i * 180); });
-        }
-        io.unobserve(el);
+        e.target.classList.add('shown');
+        io.unobserve(e.target);
       });
-    }, { threshold: 0.3 });
-    steps.forEach(function (s) { io.observe(s); });
-    io.observe(document.getElementById('media'));
+    }, { threshold: 0.25 });
+    allSteps.forEach(function (s) { io.observe(s); });
   }
   function stopObserver() { if (io) { io.disconnect(); io = null; } }
 
@@ -133,14 +108,11 @@
         s.classList.add('active');
         var f = s.querySelector('.fit'); if (f) f.style.transform = 'none';
       });
-      steps.forEach(function (s) { s.classList.remove('cur'); });
-      if (!was) {
-        steps.forEach(function (s) { s.classList.remove('shown'); });
-        media.forEach(function (m) { m.classList.remove('shown'); });
-      }
+      if (!was) allSteps.forEach(function (s) { s.classList.remove('shown', 'cur'); });
       startObserver();
     } else {
       stopObserver();
+      if (shown[idx] === 0) shown[idx] = Math.min(1, groups[idx].length);
       layout();
       fit();
     }
