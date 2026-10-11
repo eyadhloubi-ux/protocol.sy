@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>كفاءة</title>
-<meta name="description" content="كفاءة | Kafa'a — مقترح بمحورين: تأهيل العناصر من الداخل، والدمج المجتمعي عبر تأهيل طلاب الجامعة لمواقع الاحتكاك المباشر مع الناس.">
+<meta name="description" content="كفاءة | Kafa'a — برنامج بمحورين: تأهيل العناصر، والدمج المجتمعي عبر مسار يؤهل طلاب جامعة حلب لمواقع الاحتكاك المباشر مع الناس.">
 <meta name="theme-color" content="#032724">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23032724'/%3E%3Cg fill='none' stroke='%23B9A779' stroke-width='1.6'%3E%3Crect x='6' y='6' width='12' height='12'/%3E%3Crect x='6' y='6' width='12' height='12' transform='rotate(45 12 12)'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/fonts.css">
@@ -34,7 +34,7 @@
       <small dir="ltr">KAFA'A</small>
     </div>
     <div class="tools">
-      <span class="count"><b id="cur">1</b> / 5</span>
+      <span class="count"><b id="cur">1</b> / 8</span>
       <button type="button" class="fs" id="fs" aria-label="ملء الشاشة" title="ملء الشاشة">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
       </button>
@@ -45,8 +45,11 @@
     <button type="button" data-go="0" class="on" aria-label="الغلاف"><span>الغلاف</span></button>
     <button type="button" data-go="1" aria-label="الفجوتان"><span>الفجوتان</span></button>
     <button type="button" data-go="2" aria-label="المحور الأول"><span>المحور الأول</span></button>
-    <button type="button" data-go="3" aria-label="المحور الثاني"><span>المحور الثاني</span></button>
-    <button type="button" data-go="4" aria-label="التكامل"><span>التكامل</span></button>
+    <button type="button" data-go="3" aria-label="البرامج المقترحة"><span>البرامج المقترحة</span></button>
+    <button type="button" data-go="4" aria-label="تساؤلات المحور الأول"><span>تساؤلات المحور الأول</span></button>
+    <button type="button" data-go="5" aria-label="المحور الثاني"><span>المحور الثاني</span></button>
+    <button type="button" data-go="6" aria-label="تساؤلات المحور الثاني"><span>تساؤلات المحور الثاني</span></button>
+    <button type="button" data-go="7" aria-label="التكامل"><span>التكامل</span></button>
   </nav>
 
   <div class="hint" id="hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span id="hintText">مرّر للمتابعة</span></div>
@@ -54,43 +57,46 @@
   <main class="vp" id="vp">
     <div class="deck" id="deck">
 
-      <!-- ============ 0. الغلاف ============ -->
+      <!-- ============ 1. الغلاف ============ -->
       <section class="slide active" aria-label="الغلاف">
         <div class="fit cover">
           <div>
-            <p class="eyebrow rise" style="--d:60"><span dir="ltr">KAFA'A</span></p>
-            <h1 class="cv-title rise" style="--d:120">كفاءة</h1>
-            <p class="cv-lead rise" style="--d:220">برنامج بمحورين لرفع كفاءة العمل الشرطي: <strong>تأهيل العناصر</strong> من الداخل، و<strong>دمج كفاءات المجتمع</strong> من الخارج.</p>
+            <p class="eyebrow rise"><span dir="ltr">KAFA'A</span></p>
+            <h1 class="cv-title rise" style="--d:100">كفاءة</h1>
+            <p class="cv-lead rise" style="--d:200">برنامج بمحورين لرفع كفاءة العمل الشرطي: <strong>تأهيل العناصر</strong> من الداخل، و<strong>دمج كفاءات المجتمع</strong> من الخارج.</p>
           </div>
 
-          <div class="cv-visual rise" style="--d:320">
+          <div class="cv-visual rise" style="--d:300">
             <svg class="cv-flow" viewBox="0 0 640 190" aria-hidden="true">
               <line class="cv-ground" x1="40" y1="172" x2="600" y2="172"/>
 
               <!-- community -->
               <g class="cv-ppl">
-                <circle cx="122" cy="126" r="7"/><path d="M110 150c0-9 24-9 24 0"/>
-                <circle cx="160" cy="118" r="7"/><path d="M148 142c0-9 24-9 24 0"/>
-                <circle cx="198" cy="126" r="7"/><path d="M186 150c0-9 24-9 24 0"/>
+                <circle cx="122" cy="132" r="7"/><path d="M110 158c0-9 24-9 24 0"/>
+                <circle cx="160" cy="124" r="7"/><path d="M148 150c0-9 24-9 24 0"/>
+                <circle cx="198" cy="132" r="7"/><path d="M186 158c0-9 24-9 24 0"/>
               </g>
-              <circle class="cv-pg" cx="160" cy="118" r="7"/>
+              <circle class="cv-pg" cx="160" cy="124" r="7"/>
 
-              <line class="cv-path" x1="214" y1="160" x2="408" y2="160"/>
-              <circle class="cv-p p1" cx="214" cy="160" r="5"/>
-              <circle class="cv-p p2" cx="214" cy="160" r="5"/>
-              <circle class="cv-p p3" cx="214" cy="160" r="5"/>
-              <circle class="cv-p p4" cx="214" cy="160" r="5"/>
+              <line class="cv-path" x1="216" y1="164" x2="388" y2="164"/>
+              <circle class="cv-p p1" cx="216" cy="164" r="5"/>
+              <circle class="cv-p p2" cx="216" cy="164" r="5"/>
+              <circle class="cv-p p3" cx="216" cy="164" r="5"/>
+              <circle class="cv-p p4" cx="216" cy="164" r="5"/>
 
               <!-- institution -->
-              <g class="cv-emb"><rect x="474" y="12" width="12" height="12"/><rect x="474" y="12" width="12" height="12" transform="rotate(45 480 18)"/></g>
-              <line class="cv-cornice" x1="402" y1="36" x2="558" y2="36"/>
-              <rect class="cv-bld" x="410" y="36" width="140" height="136"/>
-              <rect class="cv-floor f1" x="424" y="50" width="112" height="30" rx="3"/>
-              <rect class="cv-floor f2" x="424" y="88" width="112" height="30" rx="3"/>
-              <rect class="cv-floor f3" x="424" y="126" width="112" height="30" rx="3"/>
-              <path class="cv-chev" d="M472 57l8 4 8-4M472 63l8 4 8-4M472 69l8 4 8-4"/>
-              <path class="cv-chev" d="M472 98l8 4 8-4M472 104l8 4 8-4"/>
-              <path class="cv-chev" d="M472 139l8 4 8-4"/>
+              <line class="cv-pole" x1="480" y1="30" x2="480" y2="6"/>
+              <path class="cv-flag" d="M480 7L500 11.5L480 16Z"/>
+              <polygon class="cv-ped" points="398,66 480,30 562,66"/>
+              <g class="cv-emb"><rect x="474" y="46" width="12" height="12"/><rect x="474" y="46" width="12" height="12" transform="rotate(45 480 52)"/></g>
+              <rect class="cv-ent" x="402" y="66" width="156" height="10"/>
+              <rect class="cv-col c1" x="412" y="76" width="13" height="74"/>
+              <rect class="cv-col c2" x="442" y="76" width="13" height="74"/>
+              <rect class="cv-door" x="467" y="104" width="26" height="46" rx="2"/>
+              <rect class="cv-col c3" x="505" y="76" width="13" height="74"/>
+              <rect class="cv-col c4" x="535" y="76" width="13" height="74"/>
+              <rect class="cv-step" x="400" y="150" width="160" height="10"/>
+              <rect class="cv-step" x="392" y="160" width="176" height="12"/>
             </svg>
             <ol class="cv-axes">
               <li><small>المحور الأول</small><b>تأهيل العناصر من الداخل</b></li>
@@ -100,7 +106,7 @@
         </div>
       </section>
 
-      <!-- ============ 1. الفجوتان ============ -->
+      <!-- ============ 2. الفجوتان ============ -->
       <section class="slide" aria-label="الفجوتان">
         <div class="fit">
           <p class="eyebrow rise">المنطلق</p>
@@ -146,7 +152,7 @@
         </div>
       </section>
 
-      <!-- ============ 2. المحور الأول ============ -->
+      <!-- ============ 3. المحور الأول ============ -->
       <section class="slide" aria-label="المحور الأول">
         <div class="fit">
           <header class="ax-head">
@@ -168,7 +174,7 @@
                   <svg class="chev" viewBox="0 0 30 30" aria-hidden="true"><path d="M5 6l10 6 10-6M5 13l10 6 10-6M5 20l10 6 10-6"/></svg>
                 </div>
                 <div class="tier-body">
-                  <span class="lvl">المستوى 1</span>
+                  <span class="lvl">المستوى 1 · مسار القيادة</span>
                   <h3>القيادات العليا</h3>
                   <p>مدراء الإدارات والقيادات</p>
                   <ul class="chips"><li>القيادة وإدارة التغيير</li><li>التخطيط ومتابعة الأداء</li><li>التواصل المؤسسي</li></ul>
@@ -180,7 +186,7 @@
                   <svg class="chev" viewBox="0 0 30 30" aria-hidden="true"><path d="M5 9l10 6 10-6M5 16l10 6 10-6"/></svg>
                 </div>
                 <div class="tier-body">
-                  <span class="lvl">المستوى 2</span>
+                  <span class="lvl">المستوى 2 · مسار الإشراف</span>
                   <h3>الإدارة الوسطى</h3>
                   <p>رؤساء المخافر والأقسام والضباط</p>
                   <ul class="chips"><li>إدارة الفرق والعمل الجماعي</li><li>المهارات القيادية واتخاذ القرار</li></ul>
@@ -192,7 +198,7 @@
                   <svg class="chev" viewBox="0 0 30 30" aria-hidden="true"><path d="M5 12l10 6 10-6"/></svg>
                 </div>
                 <div class="tier-body">
-                  <span class="lvl">المستوى 3</span>
+                  <span class="lvl">المستوى 3 · مسار الميدان</span>
                   <h3>العناصر الميدانية</h3>
                   <p>الاستقبال والدوريات والحواجز</p>
                   <ul class="chips"><li>مهارات التواصل</li><li>ضبط النفس وإدارة الموقف</li><li>الإجراءات وحقوق المواطن</li></ul>
@@ -212,7 +218,112 @@
         </div>
       </section>
 
-      <!-- ============ 3. المحور الثاني ============ -->
+      <!-- ============ 4. البرامج المقترحة ============ -->
+      <section class="slide" aria-label="البرامج المقترحة">
+        <div class="fit">
+          <header class="ax-head">
+            <div>
+              <p class="eyebrow rise">المحور الأول</p>
+              <h2 class="rise" style="--d:80">البرامج التدريبية المقترحة</h2>
+              <p class="lead rise" style="--d:160">اختاروا البرامج الأنسب لكل مستوى. البرامج المعلَّمة بنقطة <i class="rec-dot" aria-hidden="true"></i> مقترحة للبدء.</p>
+            </div>
+            <p class="picked rise" style="--d:240" aria-live="polite">اختياراتكم: <b id="pickCount">0</b><button type="button" id="pickReset" class="link-btn">مسح</button></p>
+          </header>
+
+          <div class="tabs" role="tablist" aria-label="المستويات">
+            <button type="button" role="tab" class="tab on" data-tab="1" aria-selected="true">القيادة</button>
+            <button type="button" role="tab" class="tab" data-tab="2" aria-selected="false">الإشراف</button>
+            <button type="button" role="tab" class="tab" data-tab="3" aria-selected="false">الميدان</button>
+          </div>
+
+          <div class="tracks">
+            <section class="track on rise" style="--d:240" data-track="1">
+              <header class="tr-head">
+                <svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 6l10 6 10-6M5 13l10 6 10-6M5 20l10 6 10-6"/></svg>
+                <div><span class="lvl">المستوى 1</span><h3>مسار القيادة</h3></div>
+              </header>
+              <ul class="progs">
+                <li><button type="button" class="prog sug" data-id="l1-1" aria-pressed="false"><b>القيادة وإدارة التغيير</b><small>قيادة المؤسسة في مرحلة التحوّل</small></button></li>
+                <li><button type="button" class="prog sug" data-id="l1-2" aria-pressed="false"><b>التخطيط ومتابعة الأداء</b><small>أهداف واضحة ومؤشرات قابلة للقياس</small></button></li>
+                <li><button type="button" class="prog sug" data-id="l1-3" aria-pressed="false"><b>التواصل المؤسسي</b><small>الخطاب الرسمي والتعامل مع الإعلام</small></button></li>
+                <li><button type="button" class="prog" data-id="l1-4" aria-pressed="false"><b>إدارة الأزمات</b><small>القرار السريع تحت الضغط</small></button></li>
+                <li><button type="button" class="prog" data-id="l1-5" aria-pressed="false"><b>الحوكمة والنزاهة</b><small>الشفافية والمساءلة داخل المؤسسة</small></button></li>
+                <li><button type="button" class="prog" data-id="l1-6" aria-pressed="false"><b>بناء الثقة مع المجتمع</b><small>الشراكات المحلية وقنوات التواصل</small></button></li>
+                <li><button type="button" class="prog" data-id="l1-7" aria-pressed="false"><b>القرار المبني على البيانات</b><small>قراءة الأرقام والتقارير</small></button></li>
+                <li><button type="button" class="prog" data-id="l1-8" aria-pressed="false"><b>إدارة الكوادر وتحفيزها</b><small>تطوير الفرق والحفاظ على الكفاءات</small></button></li>
+              </ul>
+            </section>
+
+            <section class="track rise" style="--d:320" data-track="2">
+              <header class="tr-head">
+                <svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 9l10 6 10-6M5 16l10 6 10-6"/></svg>
+                <div><span class="lvl">المستوى 2</span><h3>مسار الإشراف</h3></div>
+              </header>
+              <ul class="progs">
+                <li><button type="button" class="prog sug" data-id="l2-1" aria-pressed="false"><b>إدارة الفرق والعمل الجماعي</b><small>بناء فريق متعاون ومنضبط</small></button></li>
+                <li><button type="button" class="prog sug" data-id="l2-2" aria-pressed="false"><b>المهارات القيادية واتخاذ القرار</b><small>قرارات سليمة في المواقف اليومية</small></button></li>
+                <li><button type="button" class="prog" data-id="l2-3" aria-pressed="false"><b>توجيه العناصر الجدد</b><small>المرافقة والإرشاد اليومي</small></button></li>
+                <li><button type="button" class="prog" data-id="l2-4" aria-pressed="false"><b>إدارة الشكاوى</b><small>من الشكوى إلى التحسين</small></button></li>
+                <li><button type="button" class="prog" data-id="l2-5" aria-pressed="false"><b>حل النزاعات</b><small>داخل الفريق ومع الجمهور</small></button></li>
+                <li><button type="button" class="prog" data-id="l2-6" aria-pressed="false"><b>تنظيم المناوبات وتوزيع المهام</b><small>استثمار أفضل للوقت والكوادر</small></button></li>
+                <li><button type="button" class="prog" data-id="l2-7" aria-pressed="false"><b>التقارير والتوثيق المهني</b><small>كتابة واضحة ودقيقة</small></button></li>
+                <li><button type="button" class="prog" data-id="l2-8" aria-pressed="false"><b>إعداد المدربين <span dir="ltr">(TOT)</span></b><small>نقل التدريب إلى العناصر</small></button></li>
+              </ul>
+            </section>
+
+            <section class="track rise" style="--d:400" data-track="3">
+              <header class="tr-head">
+                <svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 12l10 6 10-6"/></svg>
+                <div><span class="lvl">المستوى 3</span><h3>مسار الميدان</h3></div>
+              </header>
+              <ul class="progs">
+                <li><button type="button" class="prog sug" data-id="l3-1" aria-pressed="false"><b>مهارات التواصل</b><small>الإصغاء والوضوح مع المواطن</small></button></li>
+                <li><button type="button" class="prog sug" data-id="l3-2" aria-pressed="false"><b>ضبط النفس وإدارة الموقف</b><small>الهدوء تحت الضغط</small></button></li>
+                <li><button type="button" class="prog sug" data-id="l3-3" aria-pressed="false"><b>الإجراءات وحقوق المواطن</b><small>معرفة ما يحق وما يجب</small></button></li>
+                <li><button type="button" class="prog" data-id="l3-4" aria-pressed="false"><b>تهدئة المواقف المتوترة</b><small>خفض التصعيد قبل تفاقمه</small></button></li>
+                <li><button type="button" class="prog" data-id="l3-5" aria-pressed="false"><b>التعامل مع الفئات الخاصة</b><small>النساء والأطفال والمسنّون وذوو الإعاقة</small></button></li>
+                <li><button type="button" class="prog" data-id="l3-6" aria-pressed="false"><b>الإسعافات الأولية والطوارئ</b><small>الاستجابة الأولى لإنقاذ الحياة</small></button></li>
+                <li><button type="button" class="prog" data-id="l3-7" aria-pressed="false"><b>إدارة الحشود</b><small>تنظيم الساحات والفعاليات بأمان</small></button></li>
+                <li><button type="button" class="prog" data-id="l3-8" aria-pressed="false"><b>المظهر والسلوك المهني</b><small>صورة العنصر من صورة المؤسسة</small></button></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5. تساؤلات المحور الأول ============ -->
+      <section class="slide" aria-label="تساؤلات المحور الأول">
+        <div class="fit qs">
+          <div class="qs-main">
+            <p class="eyebrow rise">تساؤلات للوزارة</p>
+            <h2 class="rise" style="--d:80">المحور الأول: تأهيل العناصر</h2>
+            <p class="lead rise" style="--d:160">إجاباتكم تساعدنا على بناء الخطة التفصيلية.</p>
+            <ol class="qlist">
+              <li style="--i:0">كم العدد التقريبي للعناصر في كل مستوى في حلب؟</li>
+              <li style="--i:1">هل تلقّى العناصر تدريبات سابقة؟ ومن نفّذها: الوزارة أم جهات خارجية؟</li>
+              <li style="--i:2">كم ساعة شهرياً يمكن تخصيصها للتدريب ضمن الدوام؟</li>
+              <li style="--i:3">هل سيكون الحضور إلزامياً؟ وكيف نضمن الالتزام؟</li>
+              <li style="--i:4">أين يُفضَّل إقامة التدريب: في مقرات الوزارة أم خارجها؟</li>
+              <li style="--i:5">هل يمكن أن يُحتسب اجتياز البرنامج في ترقية العنصر؟</li>
+              <li style="--i:6">هل يمكن أن تمنح الوزارة شهادة معتمدة لمن يجتاز البرنامج؟</li>
+              <li style="--i:7">ما البرامج الأكثر أولوية لكل مستوى؟</li>
+              <li style="--i:8">هل لديكم كوادر يمكن إعدادها لتكون مدربين داخليين؟</li>
+            </ol>
+          </div>
+          <div class="qs-viz rise" style="--d:300" aria-hidden="true">
+            <svg viewBox="0 0 220 210">
+              <path class="qb" d="M78 20h104a18 18 0 0 1 18 18v54a18 18 0 0 1-18 18h-8l12 22-30-22H78a18 18 0 0 1-18-18V38a18 18 0 0 1 18-18z"/>
+              <text class="qmark" x="130" y="66">؟</text>
+              <path class="ab" d="M36 128h88a16 16 0 0 1 16 16v28a16 16 0 0 1-16 16H62l-24 18 8-18h-10a16 16 0 0 1-16-16v-28a16 16 0 0 1 16-16z"/>
+              <circle class="td t1" cx="58" cy="158" r="5"/>
+              <circle class="td t2" cx="80" cy="158" r="5"/>
+              <circle class="td t3" cx="102" cy="158" r="5"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6. المحور الثاني ============ -->
       <section class="slide" aria-label="المحور الثاني">
         <div class="fit">
           <header class="ax-head">
@@ -243,27 +354,56 @@
           <ol class="stages">
             <li class="stage step"><span class="num">1</span><h3>الإطلاق والتسجيل</h3><p>إعلان المسار في جامعة حلب، وفتح باب التسجيل.</p></li>
             <li class="stage step"><span class="num">2</span><h3>الفرز الأولي</h3><p>دراسة الطلبات وفق معايير معلنة.</p><span class="ftag"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12l-4.5 5.5V13l-3-1.5v-3z"/></svg>مرحلة تصفية</span></li>
-            <li class="stage step"><span class="num">3</span><h3>الورشة التأهيلية</h3><p>تدريب مكثف في DOMAINS على التواصل والسلوك المهني، بمشاركة مدربين من وزارة الداخلية.</p></li>
+            <li class="stage step"><span class="num">3</span><h3>الورشة التأهيلية</h3><p>تدريب مكثف في <span dir="ltr">DOMAINS</span> على التواصل والسلوك المهني، بمشاركة مدربين من وزارة الداخلية.</p></li>
             <li class="stage step"><span class="num">4</span><h3>المقابلات والتقييم</h3><p>لجنة مشتركة تقيّم المشاركين وتختار المتميزين.</p><span class="ftag"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12l-4.5 5.5V13l-3-1.5v-3z"/></svg>مرحلة تصفية</span></li>
             <li class="stage step"><span class="num">5</span><h3>التدريب الميداني</h3><p>تدريب عملي في مواقع العمل بإشراف وزارة الداخلية.</p></li>
             <li class="stage step"><span class="num">6</span><h3>الترشيح</h3><p>ترشيح المؤهلين للوزارة، وهي من تتولى التدقيق والتعيين.</p><span class="ftag"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12l-4.5 5.5V13l-3-1.5v-3z"/></svg>قرار الوزارة</span></li>
           </ol>
 
-          <div class="ax2-bottom">
-            <div class="panel rise" style="--d:400">
-              <h3 class="bh">الشركاء</h3>
-              <ul class="partners">
-                <li><b>وزارة الداخلية</b></li>
-                <li><b><span dir="ltr">DOMAINS</span></b></li>
-                <li><b>جامعة حلب</b></li>
-              </ul>
-              <p class="note">المسار مبني على نموذج مسار <span dir="ltr">EngiPath</span> في <span dir="ltr">DOMAINS</span>.</p>
-            </div>
+          <div class="panel partners-panel rise" style="--d:400">
+            <h3 class="bh">الشركاء</h3>
+            <ul class="partners">
+              <li><b>وزارة الداخلية</b></li>
+              <li><b><span dir="ltr">DOMAINS</span></b></li>
+              <li><b>جامعة حلب</b></li>
+            </ul>
+            <p class="note">المسار مبني على نموذج مسار <span dir="ltr">EngiPath</span> في <span dir="ltr">DOMAINS</span>.</p>
           </div>
         </div>
       </section>
 
-      <!-- ============ 4. التكامل ============ -->
+      <!-- ============ 7. تساؤلات المحور الثاني ============ -->
+      <section class="slide" aria-label="تساؤلات المحور الثاني">
+        <div class="fit qs">
+          <div class="qs-main">
+            <p class="eyebrow rise">تساؤلات للوزارة</p>
+            <h2 class="rise" style="--d:80">المحور الثاني: الدمج المجتمعي</h2>
+            <p class="lead rise" style="--d:160">إجاباتكم تحدد شكل المسار وحجم الدفعة الأولى.</p>
+            <ol class="qlist">
+              <li style="--i:0">ما المناصب المتاحة لخريجي المسار؟ وكم العدد التقريبي للشواغر في حلب؟</li>
+              <li style="--i:1">ما الصفة الوظيفية لهذه المناصب: تعيين دائم، أم عقد، أم صفة مدنية؟</li>
+              <li style="--i:2">ما متوسط الرواتب لهذه المناصب؟</li>
+              <li style="--i:3">ما فرص الترقي لمن يُعيَّن عبر هذا المسار؟</li>
+              <li style="--i:4">ما شروط التعيين: العمر، والمؤهل العلمي، واللياقة، والخدمة العسكرية؟</li>
+              <li style="--i:5">ما إجراءات التدقيق الأمني ومدتها؟ وهل يمكن إجراؤها خلال فترة التدريب؟</li>
+              <li style="--i:6">ما المحتوى الإلزامي الذي يجب أن يتلقاه المتدرب قبل استلام مهامه؟</li>
+              <li style="--i:7">ما الحجم المناسب للدفعة الأولى؟</li>
+            </ol>
+          </div>
+          <div class="qs-viz rise" style="--d:300" aria-hidden="true">
+            <svg viewBox="0 0 220 210">
+              <path class="qb" d="M78 20h104a18 18 0 0 1 18 18v54a18 18 0 0 1-18 18h-8l12 22-30-22H78a18 18 0 0 1-18-18V38a18 18 0 0 1 18-18z"/>
+              <text class="qmark" x="130" y="66">؟</text>
+              <path class="ab" d="M36 128h88a16 16 0 0 1 16 16v28a16 16 0 0 1-16 16H62l-24 18 8-18h-10a16 16 0 0 1-16-16v-28a16 16 0 0 1 16-16z"/>
+              <circle class="td t1" cx="58" cy="158" r="5"/>
+              <circle class="td t2" cx="80" cy="158" r="5"/>
+              <circle class="td t3" cx="102" cy="158" r="5"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 8. التكامل ============ -->
       <section class="slide" aria-label="التكامل">
         <div class="fit">
           <p class="eyebrow rise">التكامل</p>
